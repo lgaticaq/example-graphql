@@ -1,0 +1,87 @@
+{
+  "name": "example-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src",
+    "dev": "nodemon src",
+    "lint": "eslint . --fix",
+    "format": "prettier-standard 'src/**/*.js' 'test/**/*.js'",
+    "precommit": "lint-staged",
+    "pretest": "npm run lint -s && npm run format -s",
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lgaticaq/example-graphql.git"
+  },
+  "keywords": [
+    "express",
+    "graphql",
+    "beerjs",
+    "async"
+  ],
+  "author": "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lgaticaq/example-graphql/issues"
+  },
+  "homepage": "https://github.com/lgaticaq/example-graphql#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-graphql": "^0.6.6",
+    "graphql": "^0.10.3",
+    "mongoose": "^4.10.8"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "eslint": "^4.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.2",
+    "lint-staged": "^4.0.0",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0",
+    "now-travis": "^1.0.1",
+    "prettier-standard": "^6.0.0",
+    "supertest": "^3.0.0"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "mocha": true
+    },
+    "rules": {
+      "no-console": [
+        "error"
+      ]
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "eslint --fix",
+        "prettier-standard",
+        "git add"
+      ],
+      "test/**/*.js": [
+        "eslint --fix",
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  }
+}
