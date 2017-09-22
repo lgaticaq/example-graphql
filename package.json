@@ -47,7 +47,7 @@
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "3.0.1",
     "husky": "0.14.3",
-    "lint-staged": "4.2.1",
+    "lint-staged": "4.2.2",
     "mocha": "3.5.3",
     "nodemon": "1.12.1",
     "now-travis": "1.0.1",
