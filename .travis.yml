@@ -5,8 +5,9 @@ services:
   - mongodb
 notifications:
   email: false
-after_script:
-  - node_modules/.bin/now-travis
-branches:
-  only:
-    - master
+deploy:
+  provider: script
+  script: node_modules/.bin/now-travis
+  skip_cleanup: true
+  on:
+    tags: true
