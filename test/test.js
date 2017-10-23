@@ -4,6 +4,7 @@ const { expect } = require('chai')
 const { describe, it } = require('mocha')
 const { stringify } = require('querystring')
 const request = require('supertest')
+const mongoose = require('mongoose')
 const app = require('../src/app')
 const Bombero = require('../src/model')
 
@@ -114,6 +115,7 @@ describe('GraphQL-HTTP tests', () => {
   after(async function () {
     try {
       await Bombero.remove({}).exec()
+      await mongoose.connection.close()
     } catch (err) {
       throw err
     }

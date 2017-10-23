@@ -10,7 +10,7 @@
     "format": "prettier-standard 'src/**/*.js' 'test/**/*.js'",
     "precommit": "lint-staged",
     "pretest": "npm run lint -s && npm run format -s",
-    "test": "mocha"
+    "test": "nyc mocha"
   },
   "engines": {
     "node": ">=8"
@@ -32,11 +32,11 @@
   },
   "homepage": "https://github.com/lgaticaq/example-graphql#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "express-graphql": "^0.6.6",
-    "graphql": "^0.11.0",
-    "mongoose": "^4.10.8"
+    "body-parser": "1.18.2",
+    "express": "4.16.2",
+    "express-graphql": "0.6.11",
+    "graphql": "0.11.7",
+    "mongoose": "4.12.4"
   },
   "devDependencies": {
     "chai": "4.1.2",
@@ -47,10 +47,12 @@
     "eslint-plugin-promise": "3.6.0",
     "eslint-plugin-standard": "3.0.1",
     "husky": "0.14.3",
+    "istanbul": "0.4.5",
     "lint-staged": "4.3.0",
     "mocha": "4.0.1",
     "nodemon": "1.12.1",
     "now-travis": "1.0.1",
+    "nyc": "^11.2.1",
     "prettier-standard": "7.0.3",
     "supertest": "3.0.0"
   },
@@ -83,5 +85,11 @@
         "git add"
       ]
     }
+  },
+  "renovate": {
+    "automerge": "minor",
+    "extends": [
+      ":library"
+    ]
   }
 }
