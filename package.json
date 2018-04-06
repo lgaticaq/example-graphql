@@ -53,7 +53,7 @@
     "nodemon": "1.17.3",
     "now-travis": "1.2.0",
     "nyc": "11.6.0",
-    "prettier-standard": "8.0.0",
+    "prettier-standard": "8.0.1",
     "supertest": "3.0.0"
   },
   "eslintConfig": {
