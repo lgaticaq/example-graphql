@@ -50,7 +50,7 @@
     "istanbul": "0.4.5",
     "lint-staged": "7.1.2",
     "mocha": "5.2.0",
-    "nodemon": "1.17.4",
+    "nodemon": "1.17.5",
     "now-travis": "1.2.0",
     "nyc": "11.8.0",
     "prettier-standard": "8.0.1",
