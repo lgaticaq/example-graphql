@@ -48,7 +48,7 @@
     "eslint-plugin-standard": "3.1.0",
     "husky": "0.14.3",
     "istanbul": "0.4.5",
-    "lint-staged": "7.2.0",
+    "lint-staged": "7.2.2",
     "mocha": "5.2.0",
     "nodemon": "1.18.3",
     "now-travis": "1.2.0",
