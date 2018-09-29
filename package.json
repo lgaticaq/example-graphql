@@ -87,9 +87,6 @@
     }
   },
   "renovate": {
-    "automerge": "minor",
-    "extends": [
-      ":library"
-    ]
+    "enabled": false
   }
 }
